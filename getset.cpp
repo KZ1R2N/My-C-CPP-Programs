@@ -29,6 +29,17 @@ int calculator ::sub()
 }
 int calculator ::dev()
 {
+    try
+    {
+        if (second_number == 0)
+            throw "You cannot devide number by 0";
+    }
+    catch (const char *e)
+
+    {
+        cerr << e;
+    }
+
     return first_number / second_number;
 }
 int calculator ::mult()
@@ -43,36 +54,44 @@ int main()
         char value;
         number.inputnumbers();
         cout << "what you want to do? " << endl;
-        cout << "For sum : +" << endl;
-        cout << "For sub : -" << endl;
-        cout << "For dev : /" << endl;
-        cout << "For mult : *" << endl;
+        cout << "For sum (+): Press 1" << endl;
+        cout << "For sub (-): Press 2" << endl;
+        cout << "For dev (/): Press 3" << endl;
+        cout << "For mult (*): Press 4" << endl;
+        try
+        {
+            cin >> value;
 
-        cin >> value;
-
-        if (value == '+')
-        {
-            number.sum();
-            cout << "The result is: " << number.sum() << endl
-                 << endl;
+            if (value == '1')
+            {
+                number.sum();
+                cout << "The result is: " << number.sum() << endl
+                     << endl;
+            }
+            else if (value == '2')
+            {
+                number.sub();
+                cout << "The result is: " << number.sub() << endl
+                     << endl;
+            }
+            else if (value == '3')
+            {
+                number.dev();
+                cout << "The result is: " << number.dev() << endl
+                     << endl;
+            }
+            else if (value == '4')
+            {
+                number.mult();
+                cout << "The result is: " << number.mult() << endl
+                     << endl;
+            }
+            if (value != '1' || value != '2' || value != '3' || value != '4')
+                throw "Your Input Is Invalid, TRY AGAIN:\n\n";
         }
-        else if (value == '-')
+        catch (const char *e)
         {
-            number.sub();
-            cout << "The result is: " << number.sub() << endl
-                 << endl;
-        }
-        else if (value == '/')
-        {
-            number.dev();
-            cout << "The result is: " << number.dev() << endl
-                 << endl;
-        }
-        else if (value == '*')
-        {
-            number.mult();
-            cout << "The result is: " << number.mult() << endl
-                 << endl;
+            cerr << e;
         }
     }
 }

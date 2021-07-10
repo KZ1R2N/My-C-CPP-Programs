@@ -8,14 +8,17 @@ public:
     int firstvalue = 3;
 
 private:
+    friend int ratun(testclass);
     int secondvalue = 4;
 };
-
+int ratun(testclass rat)
+{
+    return rat.secondvalue;
+}
 int main()
 {
     testclass value1, value2;
-    cout << value1.firstvalue << endl;
-    cout << value2.firstvalue << endl;
 
+    cout << ratun(value1);
     return 0;
 }

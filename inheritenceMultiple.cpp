@@ -44,7 +44,7 @@ void Exam ::get_marks()
     cout << "The marks obtained in physics are: " << physics << endl;
 }
 
-class Result : public Exam, public Student
+class Result : virtual public Exam, public Student
 {
     float percentage;
 
