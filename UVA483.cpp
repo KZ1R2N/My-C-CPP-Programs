@@ -10,8 +10,8 @@ int main()
         b = -1;
         for (i = 0; i < s.size(); i++)
         {
-            if (s[i] == ' ') //love you
-            {                //01234
+            if (s[i] == ' ') 
+            {                
 
                 for (j = i - 1; j > b; j--)
                 {
