@@ -26,7 +26,7 @@ int main()
     {
         int value = n;
 
-        for (i = 0; v[i] * v[i] <= n; i++)
+        for (i = 0; v[i] <= n; i++)
         {
             if (n % v[i] == 0)
             {
@@ -40,12 +40,12 @@ int main()
                 cout << v[i] << " " << count << endl;
             }
         }
-        if (n != 1)
-        {
-            //v.push_back((n, 1));
+        // if (n != 1)
+        // {
+        //     //v.push_back((n, 1));
 
-            cout << n << " " << 1 << endl;
-        }
+        //     cout << n << " " << 1 << endl;
+        // }
         //cout << value << " : " << count2 << endl;
         // for (i = 0; i < v.size(); i++)
         // {

@@ -151,7 +151,7 @@ void login()
             {
                 system("cls");
                 printf("\n\n\n\t\t\tYOU HAVE LOGGED IN SUCCESSFULLY!!");
-                //PlaySound(TEXT("E:\\IDM\\Doc\\1st year project\\login project.wav"), NULL, SND_SYNC);
+                PlaySound(TEXT("E:\\IDM\\Doc\\1st year project\\login project.wav"), NULL, SND_SYNC);
                 printf("\n\n\n\t\t\t\tWELCOME, HAVE A NICE DAY");
                 break;
             }
@@ -175,3 +175,4 @@ void login()
     }
     getch();
 }
+
