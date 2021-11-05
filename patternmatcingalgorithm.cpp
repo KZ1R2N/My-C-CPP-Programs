@@ -10,7 +10,7 @@ int main()
     if (strlen(text) < strlen(pattern))
     {
 
-        printf("Sorry Patter Cannot be found!");
+        printf("Sorry Pattern Cannot be found!");
     }
     else
     {
@@ -32,12 +32,11 @@ int main()
             {
 
                 printf("pattern found at index %d \n", i);
-                printf("Patter Comparison Count is: %d", count);
+                printf("Patter Comparison Count is: %d", count - strlen(pattern) + 1);
                 break;
             }
-            else
-                printf("pattern not found at index %d \n", i);
+            // else
+            //     printf("pattern not found at index %d \n", i);
         }
     }
-    return 0;
 }
